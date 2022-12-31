@@ -17,6 +17,7 @@ function App() {
    data.map((items)=>{
     return (
       <Cards
+      key={items.id}
       image={items.coverImg}
       rating={items.stats.rating}
       reviewCount = {items.stats.reviewCount}
