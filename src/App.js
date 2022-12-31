@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar } from "./Components";
+import { Hero } from "./Components";
+import { Cards } from "./Components";
+import { data } from './data';
+// import cardimg from  "./Assets/Images/cardimg1.png";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <Navbar/>
+ <Hero/>
+ <div className='grid grid-cols-3 gap-40 overflow-x-scroll'>
+
+{
+   data.map((items)=>{
+    return (
+      <Cards
+      image={items.coverImg}
+      rating={items.stats.rating}
+      reviewCount = {items.stats.reviewCount}
+      location = {items.location}
+      price= {items.price}
+      title={items.title}
+      /> 
+    )
+    })
+}
+  {/* {card} */}
+</div>
+</div>
+
+    
   );
 }
 
