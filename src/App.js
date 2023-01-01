@@ -11,7 +11,7 @@ function App() {
     <div className="App">
  <Navbar/>
  <Hero/>
- <div className='grid grid-cols-3 gap-40 overflow-x-scroll'>
+ <div className='grid grid-cols-3 gap-[11rem] overflow-x-scroll'>
 
 {
    data.map((items)=>{
@@ -24,6 +24,7 @@ function App() {
       location = {items.location}
       price= {items.price}
       title={items.title}
+      openSpots={items.openSpots}
       /> 
     )
     })
