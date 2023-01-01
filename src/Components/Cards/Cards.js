@@ -8,8 +8,7 @@ import star from "../../Assets/Images/Star 1.png";
    } else if (props.location === "Online" ){
     badgetext = "ONLINE"
    }
-
-   console.log(badgetext);
+  //  console.log(badgetext);
   return (
 <Fragment>
 

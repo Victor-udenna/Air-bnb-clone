@@ -1,3 +1,5 @@
+import React, {Fragment} from 'react';
+
 import './App.css';
 import { Navbar } from "./Components";
 import { Hero } from "./Components";
@@ -8,10 +10,11 @@ import { data } from './data';
 function App() {
 
   return (
-    <div className="App">
+<Fragment>
+<div className="App ">
  <Navbar/>
  <Hero/>
- <div className='grid grid-cols-3 gap-[11rem] overflow-x-scroll'>
+ <div className='p-5 grid grid-cols-3 gap-[12rem] overflow-x-scroll'>
 
 {
    data.map((items)=>{
@@ -32,6 +35,10 @@ function App() {
   {/* {card} */}
 </div>
 </div>
+<div className='screen_size hidden text-5xl font-bold'>
+<h1>This is only available for mobile devices  <span className='text-blue-300'>:-)</span></h1>
+</div>
+</Fragment>
 
     
   );

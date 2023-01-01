@@ -3,7 +3,7 @@ import hero_img from "../../Assets/Images/Hero_img.png";
 
  const Hero = () => {
   return (
-   <section className='flex flex-col gap-6 py-10'>
+   <section className='px-5 flex flex-col gap-6 py-10'>
     <div className='max-w-[400px]'>
         <img src={hero_img} alt="hero_img"/>
     </div>
